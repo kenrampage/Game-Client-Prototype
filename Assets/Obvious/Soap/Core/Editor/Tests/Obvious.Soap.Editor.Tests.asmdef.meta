@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5e82f469542c6564e9775cac1503748b
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 232107
+  packageName: Soap - ScriptableObject Architecture Pattern
+  packageVersion: 2.3.0
+  assetPath: Assets/Obvious/Soap/Core/Editor/Tests/Obvious.Soap.Editor.Tests.asmdef
+  uploadId: 626169

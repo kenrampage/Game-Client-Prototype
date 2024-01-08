@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4859bd80268e37644a0f8882e920ad92
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 232107
+  packageName: Soap - ScriptableObject Architecture Pattern
+  packageVersion: 2.3.0
+  assetPath: Assets/Obvious/Soap/Examples/Scenes/4_Events/4_ScriptableEvents_Documentation.pdf
+  uploadId: 626169

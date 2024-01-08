@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 71d72e98da607a349b59544cd2985394
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 232107
+  packageName: Soap - ScriptableObject Architecture Pattern
+  packageVersion: 2.3.0
+  assetPath: Assets/Obvious/Soap/Documentation/Soap User Guide.pdf
+  uploadId: 626169

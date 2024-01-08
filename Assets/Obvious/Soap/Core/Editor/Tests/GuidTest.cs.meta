@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 8aad79f0e6044dbc9085490e45aced73
+timeCreated: 1666052034
+AssetOrigin:
+  serializedVersion: 1
+  productId: 232107
+  packageName: Soap - ScriptableObject Architecture Pattern
+  packageVersion: 2.3.0
+  assetPath: Assets/Obvious/Soap/Core/Editor/Tests/GuidTest.cs
+  uploadId: 626169
