@@ -14,5 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 5ff3250aee73371448a4f71212ce8877
+  - enabled: 1
+    path: Assets/Scenes/IntroCutscene.unity
+    guid: bef3c28aca7a94a4a89b9354aef596da
+  - enabled: 1
+    path: Assets/Scenes/Gameplay.unity
+    guid: 43957d8dbf580564ea3f86c274940fbc
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

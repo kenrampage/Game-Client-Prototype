@@ -378,6 +378,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  InvokeOnStart: 0
 --- !u!4 &426150267
 Transform:
   m_ObjectHideFlags: 0
@@ -1256,6 +1257,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  InvokeOnStart: 0
 --- !u!4 &1961970067
 Transform:
   m_ObjectHideFlags: 0
@@ -1309,8 +1311,8 @@ SceneRoots:
   - {fileID: 1970324626}
   - {fileID: 1145650609}
   - {fileID: 1871396594}
-  - {fileID: 1297987690}
   - {fileID: 425213861}
+  - {fileID: 1297987690}
   - {fileID: 24860730}
   - {fileID: 490581291}
   - {fileID: 1421614159}
