@@ -953,17 +953,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetPauseExit
+          m_StringArgument: ExitPauseState
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 425213859}
@@ -976,7 +976,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetRoamingState
+          m_StringArgument: SetStateToRoaming
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &288030050
@@ -1100,17 +1100,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetSettingsState
+          m_StringArgument: SetStateToSettings
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &338526951
@@ -1298,6 +1298,7 @@ GameObject:
   - component: {fileID: 425213861}
   - component: {fileID: 425213860}
   - component: {fileID: 425213859}
+  - component: {fileID: 425213862}
   m_Layer: 0
   m_Name: 'State Machine: Gameplay'
   m_TagString: Untagged
@@ -1334,10 +1335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SceneLoader","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"SceneLoader,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 472136074}
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!4 &425213861
 Transform:
   m_ObjectHideFlags: 0
@@ -1353,6 +1352,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425213862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425213858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be4161beb6babe428f8453728aa3300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _binding: 0
+  _disableAfterSubscribing: 0
+  _eventResponses:
+  - _scriptableEvent: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+    _response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 425213859}
+          m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
+            Unity.VisualScripting.State
+          m_MethodName: TriggerUnityEvent
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &472136073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,7 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152f621975894d64587531cc8a5b8987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneLoaderData: {fileID: 11400000, guid: e303acd4c822d514ab9c70c6c5ba3822, type: 2}
+  _sceneNameToLoad: {fileID: 11400000, guid: 85dda096918b1e64a9380a54ded7b290, type: 2}
   OnLoadComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -1620,17 +1651,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetRoamingState
+          m_StringArgument: SetStateToRoaming
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &574016317
@@ -2772,17 +2803,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetMenuState
+          m_StringArgument: SetStateToMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &791796770
@@ -2906,17 +2937,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetDroneState
+          m_StringArgument: SetStateToDrone
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &801659685
@@ -3810,17 +3841,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetArgumentsState
+          m_StringArgument: SetStateToArguments
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1025807155
@@ -3944,17 +3975,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetMinigameState
+          m_StringArgument: SetStateToMinigame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1035298526
@@ -4349,17 +4380,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetMapState
+          m_StringArgument: SetStateToMap
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1167637602
@@ -4443,41 +4474,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"MenuObjects","value":{"$content":[0],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"RoamingObjects","value":{"$content":[0],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"MapObjects","value":{"$content":[1],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"DroneObjects","value":{"$content":[1],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ArgumentsObjects","value":{"$content":[2],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"MinigameObjects","value":{"$content":[2],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"JournalObjects","value":{"$content":[3],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"MenuObjects","value":{"$content":[3],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"SettingsObjects","value":{"$content":[4],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"MapObjects","value":{"$content":[4],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"RoamingObjects","value":{"$content":[5],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ArgumentsObjects","value":{"$content":[5],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"DroneObjects","value":{"$content":[6],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"JournalObjects","value":{"$content":[6],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"MinigameObjects","value":{"$content":[7],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"SettingsObjects","value":{"$content":[7],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"SceneLoader","value":{"$content":8,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"SceneLoader,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
+    - {fileID: 1476706581}
+    - {fileID: 55564779}
+    - {fileID: 1315384552}
     - {fileID: 239478575}
     - {fileID: 1793310900}
     - {fileID: 649231660}
     - {fileID: 1305270821}
     - {fileID: 1094238514}
-    - {fileID: 1476706581}
-    - {fileID: 55564779}
-    - {fileID: 1315384552}
     - {fileID: 472136074}
 --- !u!4 &1190172522
 Transform:
@@ -4577,9 +4608,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: e303acd4c822d514ab9c70c6c5ba3822, type: 2}
-        m_TargetAssemblyTypeName: SOSceneLoaderData, Assembly-CSharp
-        m_MethodName: SetSceneNameToLoad
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4994,17 +5026,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetMenuState
+          m_StringArgument: SetStateToMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1266000552
@@ -5535,17 +5567,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetDroneState
+          m_StringArgument: SetStateToDrone
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1344894810
@@ -5733,17 +5765,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetJournalState
+          m_StringArgument: SetStateToJournal
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1377193903
@@ -6003,17 +6035,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetPauseState
+          m_StringArgument: SetStateToPause
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1449401114
@@ -6240,17 +6272,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetRoamingState
+          m_StringArgument: SetStateToRoaming
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1480101989
@@ -6510,17 +6542,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetPauseExit
+          m_StringArgument: ExitPauseState
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 425213859}
@@ -6533,7 +6565,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetMinigameState
+          m_StringArgument: SetStateToMinigame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1541967724
@@ -6657,17 +6689,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetMinigameState
+          m_StringArgument: SetStateToMinigame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1546413760
@@ -6791,17 +6823,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetPauseState
+          m_StringArgument: SetStateToPause
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1562023543
@@ -7061,17 +7093,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetMenuState
+          m_StringArgument: SetStateToMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1609022095
@@ -7331,17 +7363,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetPauseState
+          m_StringArgument: SetStateToPause
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1654491452
@@ -7739,17 +7771,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetMenuState
+          m_StringArgument: SetStateToMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1700017463
@@ -8617,17 +8649,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 425213859}
-        m_TargetAssemblyTypeName: Unity.VisualScripting.EventMachine`2[[Unity.VisualScripting.StateGraph,
-          Unity.VisualScripting.State
-        m_MethodName: TriggerUnityEvent
+      - m_Target: {fileID: 11400000, guid: 7f3c2d66492779b46a7c819506fc5fb5, type: 2}
+        m_TargetAssemblyTypeName: Obvious.Soap.ScriptableEvent`1[[System.String,
+          mscorlib
+        m_MethodName: Raise
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetPauseExit
+          m_StringArgument: ExitPauseState
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 425213859}
@@ -8640,7 +8672,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SetDroneState
+          m_StringArgument: SetStateToDrone
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2014277519
