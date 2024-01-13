@@ -1393,30 +1393,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472136075}
-  - component: {fileID: 472136074}
+  - component: {fileID: 472136076}
   m_Layer: 0
-  m_Name: SceneLoader
+  m_Name: Loading Scene Loader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &472136074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472136073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152f621975894d64587531cc8a5b8987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sceneNameToLoad: {fileID: 11400000, guid: 85dda096918b1e64a9380a54ded7b290, type: 2}
-  OnLoadComplete:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &472136075
 Transform:
   m_ObjectHideFlags: 0
@@ -1432,6 +1416,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &472136076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472136073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce921ed7c14a1fe43a7b6ca1462213dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567374829
 GameObject:
   m_ObjectHideFlags: 0
@@ -4509,7 +4505,7 @@ MonoBehaviour:
     - {fileID: 649231660}
     - {fileID: 1305270821}
     - {fileID: 1094238514}
-    - {fileID: 472136074}
+    - {fileID: 0}
 --- !u!4 &1190172522
 Transform:
   m_ObjectHideFlags: 0
@@ -4621,8 +4617,8 @@ MonoBehaviour:
           m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 472136074}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 472136076}
+        m_TargetAssemblyTypeName: LoadingSceneLoader, Assembly-CSharp
         m_MethodName: LoadLoadingScene
         m_Mode: 1
         m_Arguments:

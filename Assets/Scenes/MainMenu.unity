@@ -755,13 +755,14 @@ MonoBehaviour:
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"ManageDataObjects","value":{"$content":[2],"$type":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"SceneLoader","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"SceneLoader,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Loading
+      Scene Loader","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"LoadingSceneLoader,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 1476706581}
     - {fileID: 1268297842}
     - {fileID: 1423041103}
-    - {fileID: 472136074}
+    - {fileID: 472136076}
 --- !u!4 &425213861
 Transform:
   m_ObjectHideFlags: 0
@@ -819,30 +820,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472136075}
-  - component: {fileID: 472136074}
+  - component: {fileID: 472136076}
   m_Layer: 0
-  m_Name: SceneLoader
+  m_Name: Loading Scene Loader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &472136074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472136073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152f621975894d64587531cc8a5b8987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sceneNameToLoad: {fileID: 11400000, guid: 85dda096918b1e64a9380a54ded7b290, type: 2}
-  OnLoadComplete:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &472136075
 Transform:
   m_ObjectHideFlags: 0
@@ -858,6 +843,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &472136076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472136073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce921ed7c14a1fe43a7b6ca1462213dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &507115293
 GameObject:
   m_ObjectHideFlags: 0

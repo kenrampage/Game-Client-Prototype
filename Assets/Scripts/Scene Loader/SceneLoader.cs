@@ -6,10 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    //[SerializeField] private SOSceneLoaderData _sceneLoaderData;
     [SerializeField] private StringVariable _sceneNameToLoad;
 
-    private string _loadingSceneName = "Loading";
     private bool allowSceneActivation = false;
 
     public UnityEvent OnLoadComplete;
@@ -43,11 +41,6 @@ public class SceneLoader : MonoBehaviour
    
     }
 
-
-    public void LoadLoadingScene()
-    {
-        SceneManager.LoadScene(_loadingSceneName, LoadSceneMode.Single);
-    }
 
     public void AllowSceneActivation()
     {
