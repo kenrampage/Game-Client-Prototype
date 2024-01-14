@@ -298,14 +298,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SceneLoader","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"SceneLoader,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"OnLoadingStarted","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"ScriptableEventNoParamInvoker,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"OnLoadingComplete","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"ScriptableEventNoParamInvoker,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 24860729}
-    - {fileID: 425213864}
-    - {fileID: 425213863}
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!4 &425213861
 Transform:
   m_ObjectHideFlags: 0
@@ -803,8 +797,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"SceneLoader","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"SceneLoader,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"OnLoadingStarted","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"ScriptableEventNoParamInvoker,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"OnLoadingComplete","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"ScriptableEventNoParamInvoker,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 24860729}
+    - {fileID: 425213864}
+    - {fileID: 425213863}
 --- !u!4 &1297987690
 Transform:
   m_ObjectHideFlags: 0
