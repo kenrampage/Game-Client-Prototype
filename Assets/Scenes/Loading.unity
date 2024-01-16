@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 425213859}
   - component: {fileID: 425213862}
   m_Layer: 0
-  m_Name: 'StateMachine: Loading'
+  m_Name: 'State Machine: Loading Scene'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,8 +329,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"SceneLoader","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"SceneLoader,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"OnLoadingStartedEvent","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Obvious.Soap.ScriptableEventNoParam,
+      Obvious.Soap, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"OnLoadingCompleteEvent","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Obvious.Soap.ScriptableEventNoParam,
+      Obvious.Soap, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 24860729}
+    - {fileID: 11400000, guid: 4cd10ce3bfc136c478bc89983f8e02ec, type: 2}
+    - {fileID: 11400000, guid: 492222d3eb1cc2e41afaa300bd43eadf, type: 2}
 --- !u!4 &425213861
 Transform:
   m_ObjectHideFlags: 0
@@ -800,14 +806,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[{"name":"SceneLoader","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"SceneLoader,
-      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"OnLoadingStartedEvent","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Obvious.Soap.ScriptableEventNoParam,
-      Obvious.Soap, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"OnLoadingCompleteEvent","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Obvious.Soap.ScriptableEventNoParam,
-      Obvious.Soap, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 24860729}
-    - {fileID: 11400000, guid: 4cd10ce3bfc136c478bc89983f8e02ec, type: 2}
-    - {fileID: 11400000, guid: 492222d3eb1cc2e41afaa300bd43eadf, type: 2}
+    _json: '{"declarations":{"Kind":"Scene","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!4 &1297987690
 Transform:
   m_ObjectHideFlags: 0
