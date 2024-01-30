@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ScriptableEventString_EventValueListenerDemo
   m_EditorClassIdentifier: 
   _debugLogEnabled: 0
-  _debugValue: 
+  _debugValue: test3
